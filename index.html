@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALL GOUSIA TRANSPORT COMPANY GOODS</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="video/favicon.ico" />
+<style>
+body{font-family:'Poppins',sans-serif;margin:0;padding:0;}
+/* NAVBAR */
+.navbar{background:#000;box-shadow:0 5px 15px rgba(0,0,0,0.5);}
+.logo{font-family:'Orbitron',sans-serif;color:#ffb400;font-size:22px;letter-spacing:2px;}
+.nav-link{color:white !important;margin-left:15px;font-weight:500;}
+.nav-link:hover{color:#ffb400 !important;}
+.navbar .lang-btn{
+    width:50px;height:50px;border-radius:50%;background:#ffb400;color:#000;
+    border:none;font-weight:bold;cursor:pointer;box-shadow:0 5px 10px rgba(0,0,0,0.3);
+    transition:0.3s;margin-right:15px; order: -1;
+}
+.navbar .lang-btn:hover{background:#e6a800;}
+.navbar-toggler{margin-top:5px;}
+/* HERO */
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero video{
+    height: 100vh;
+    object-fit: cover;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+.hero-content{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+.hero-content h1{
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+.hero-content p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.btn-warning{
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+.btn-warning:hover{
+    background: #ff9900;
+    transform: scale(1.05);
+}
+/* SERVICES */
+.service-box{background:white;padding:25px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:0.3s;}
+.service-box:hover{transform:translateY(-5px);}
+.icon{font-size:35px;color:#ffb400;}
+/* RATE TABLE */
+.table thead th{background:#ffb400;color:#000;font-weight:600;}
+.table tbody td{font-size:0.95rem;}
+.table tbody tr td:nth-child(1) { background: #fdf1e6; } /* City */
+.table tbody tr td:nth-child(2) { background: #f0f0f0; }   /* Items */
+.table tbody tr td:nth-child(3) { background: #fff5cc; }   /* Price */
+.table tbody tr td:nth-child(4) { background: #e6f7ff; }   /* Delivery Time */
+/* CONTACT */
+.contact{background:#000;color:white;padding:40px 0;}
+.contact input,.contact textarea{border-radius:8px;}
+.contact button{border-radius:8px;font-weight:600;width:100%;}
+.contact-heading {font-family: 'Orbitron', sans-serif;font-size: 32px;color: #ffb400;position: relative;display: inline-block;margin-bottom: 25px;text-transform: uppercase;}
+.contact-heading::after {content: '';position: absolute;left: 0;bottom: -5px;width: 50%;height: 4px;background: #ffb400;border-radius: 2px;}
+/* FOOTER */
+.footer{
+background:#0f172a;
+color:#d1d5db;
+padding:50px 0 20px;
+}
+.footer h5{
+color:#f43f5e;
+margin-bottom:20px;
+font-weight:600;
+}
+.footer p{
+font-size:15px;
+margin-bottom:8px;
+}
+.footer-links{
+list-style:none;
+padding:0;
+}
+.footer-links li{
+margin-bottom:10px;
+}
+.footer-links a{
+text-decoration:none;
+color:#cbd5f5;
+transition:0.3s;
+}
+.footer-links a:hover{
+color:#f43f5e;
+padding-left:6px;
+}
+.social-icons{
+margin-top:15px;
+}
+.social-icons a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:42px;
+height:42px;
+border-radius:50%;
+margin-right:10px;
+font-size:20px;
+color:#fff;
+transition:0.3s;
+}
+/* WhatsApp */
+.social-icons .whatsapp{
+background:#25D366;
+}
+/* Facebook */
+.social-icons .facebook{
+background:#1877F2;
+}
+/* Instagram */
+.social-icons .instagram{
+background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+.social-icons a:hover{
+transform:translateY(-4px);
+}
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+padding-top:15px;
+border-top:1px solid #1f2937;
+font-size:14px;
+color:#9ca3af;
+}
+/* discount */
+.discount-section{
+background:#f4a742;
+}
+
+.discount-box{
+background:#fff;
+padding:40px;
+max-width:600px;
+border:6px double #000;
+}
+
+.title{
+font-size:45px;
+font-weight:bold;
+}
+
+.subtitle{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.desc{
+font-size:18px;
+line-height:1.8;
+}
+
+.company{
+font-size:30px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.date{
+font-weight:bold;
+margin-top:10px;
+}
+
+.support{
+border:2px solid #000;
+display:inline-block;
+padding:8px 20px;
+margin-top:15px;
+font-weight:bold;
+}
+
+.service{
+margin-top:10px;
+font-weight:bold;
+}
+/* WHATSAPP */
+.whatsapp-btn{position:fixed;bottom:15px;right:15px;z-index:1000;}
+.whatsapp-btn img{width:60px;height:60px;}
+</style>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-1">
+  <div class="container d-flex align-items-center">
+    <button class="btn btn-sm btn-light me-2" id="langToggle">Sindhi</button>
+    <a class="navbar-brand logo m-0" href="#">🚚 ALL GOUSIA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link py-1" id="navHome" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link py-1" id="navServices" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link py-1" id="navAbout" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link py-1" id="navContact" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<video autoplay muted loop class="w-100">
+  <source src="video/WhatsApp Video 2026-03-10 at 1.47.45 AM.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+<div class="container hero-content">
+  <h1 id="heroTitle">All Gousia Company – Your Trust, Our Responsibility. 🤝🚚</h1>
+  <p class="lead" id="heroLead">“Safe, Fast and Reliable Transport Service.”</p>
+  <p id="heroDesc">“We transport your goods and cargo safely from one place to another with fast and on-time delivery. Our mission is to provide our customers with the best transport service.” 🚚📦</p>
+  <a class="btn btn-warning btn-lg mt-3" id="bookNow">Book Now</a>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-5 bg-light">
+<div class="container">
+  <div class="text-center mb-4"><h2 id="servicesTitle">Our Services</h2></div>
+  <div class="row g-3">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-box text-center">
+        <div class="icon">🚚</div>
+        <h5 id="service1">Truck Transport</h5>
+        <p id="service1Desc">Fast goods delivery across cities.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-box text-center">
+        <div class="icon">📦</div>
+        <h5 id="service2">Cargo Delivery</h5>
+        <p id="service2Desc">Professional cargo handling.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="service-box text-center">
+        <div class="icon">🏭</div>
+        <h5 id="service3">Warehousing</h5>
+        <p id="service3Desc">Secure storage for goods.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- DISCOUNT -->
+<section class="discount-section py-5">
+<div class="container d-flex justify-content-center">
+
+<div class="discount-box text-center">
+
+<h2 class="title">العفیہ</h2>
+<p class="subtitle"> ٹرانسپورٹ کمپنی</p>
+
+<p class="desc">
+نہایت مسرت کے ساتھ اپنے پرانے اور نئے سال کی خوشی میں ٹرانسپورٹ
+کرایہ میں <strong>30%</strong> کا زبردست اعلان کرتے ہیں۔
+پرانے اور نئے ساتھیوں سے گزارش ہے ہماری سروسز سے بھرپور فائدہ اٹھائیں۔
+</p>
+
+<h3 class="company">العفیہ ٹرانسپورٹ کمپنی</h3>
+
+<p class="date">
+آفر کی مدت: 05-01-2026 سے 11-01-2026 تک
+</p>
+
+<div class="support">
+آپ کے تعاون کے طلبگار
+</div>
+
+<p class="service">روزانہ سروس</p>
+
+<a href="#" class="btn btn-dark mt-3" onclick="checkDiscount()">ابھی بک کریں</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- RATE LIST -->
+<section class="py-5 bg-light">
+<div class="container">
+  <div class="text-center mb-4"><h2 id="rateTitle">ALL Gousia Transport Rate List on March</h2></div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th id="thItem">City</th>
+          <th id="thTruck">Items</th>
+          <th id="thPrice">Price</th>
+          <th id="thTime">Delivery Time</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <h2 class="contact-heading mb-3" id="contactTitle">Contact Us</h2>
+        <p id="contactPhone"><strong>Phone:</strong> +92 3220251034</p>
+        <p id="contactEmail"><strong>Email:</strong> info@gousiatransport.com</p>
+        <p id="contactLocation"><strong>Location:</strong> All Ghousia Goods Transport, Karachi, Pakistan</p>
+        <div class="map mt-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.005005063449!2d66.99972747391548!3d24.86367864513152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f002d06dfc5%3A0x77de548a9378a6b9!2sAll%20Ghousia%20Goods%20transport!5e0!3m2!1sen!2s!4v1773175987877!5m2!1sen!2s"
+            width="100%" height="250" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <form>
+          <input class="form-control mb-3" id="inputName" placeholder="Your Name" required>
+          <input class="form-control mb-3" id="inputPhone" placeholder="Phone" required>
+          <textarea class="form-control mb-3" id="inputMsg" placeholder="Message" rows="5" required></textarea>
+          <button type="submit" class="btn btn-warning w-100" id="sendBtn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/923220251034" target="_blank" class="whatsapp-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<footer class="footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-4">
+<h5>About Us</h5>
+<p>ALL GOUSIA Transport Company provides reliable goods transport across Pakistan. Fast, safe and affordable delivery services for businesses and individuals.</p>
+</div>
+<div class="col-md-4">
+<h5>Quick Links</h5>
+<ul class="footer-links">
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Rate List</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5>Contact Info</h5>
+<p><i class="bi bi-geo-alt"></i> Karachi, Pakistan</p>
+<p><i class="bi bi-telephone"></i> +92 3220251034</p>
+<p><i class="bi bi-envelope"></i> info@gousiatransport.com</p>
+<p><i class="bi bi-clock"></i> Office Timing: 10:00 AM – 7:30 PM</p>
+<p><i class="bi bi-calendar"></i> Monday – Saturday</p>
+<p><i class="bi bi-box-seam"></i> Goods Booking Last Time: 7:30 PM</p>
+<div class="social-icons">
+<a href="https://wa.me/923220251034"><i class="bi bi-whatsapp"></i></a>
+<a href="#"><i class="bi bi-facebook"></i></a>
+<a href="#"><i class="bi bi-instagram"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+ ALL GOUSIA TRANSPORT COMPANY
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let isEnglish = true;
+
+const tbody = document.querySelector('.table tbody');
+const langToggle = document.getElementById('langToggle');
+
+const rateListEnglish = [
+    ['sakaro/baharo/garo','ketta RICE/DAL50kg','PKR 140','24 hours'],
+    ['sakaro/baharo/garo','ketta RICE/DAL25kg','PKR 70','24 hours'],
+    ['sakaro/baharo/garo','Ketta beaj or nimco','PKR 120','24 hours'],
+    ['sakaro/baharo/garo','Ketta Shopper 25kg','PKR 120','24 hours'],
+    ['sakaro/baharo/garo','ketta khajor','PKR 150','24 hours'],
+    ['sakaro/baharo/garo','bandel khajor','PKR 200','24 hours'],
+    ['sakaro/baharo/garo','bora akhbar','PKR 100','24 hours'],
+    ['sakaro/baharo/garo','bora Poli Tap','PKR 250','24 hours'],
+    ['sakaro/baharo/garo','bora lifafa kagaz theali 100kg','PKR 400','24 hours'],
+    ['sakaro/baharo/garo','bora keal','PKR 150','24 hours'],
+    ['sakaro/baharo/garo','bora tewa','PKR 250','24 hours'],
+    ['sakaro/baharo/garo','bora paper','PKR 500','24 hours'],
+    ['sakaro/baharo/garo','bandel chatai','PKR 400','24 hours'],
+    ['sakaro/baharo/garo','kartoun singli','PKR 120','24 hours'],
+    ['sakaro/baharo/garo','kartoun 2 wala','PKR 120','24 hours'],
+    ['sakaro/baharo/garo','kartoun 3/4 wala','PKR 180','24 hours'],
+    ['sakaro/baharo/garo','bandel or bora kapera','PKR 400','24 hours'],
+    ['sakaro/baharo/garo','bandel balcha khodear','PKR 150','24 hours'],
+    ['sakaro/baharo/garo','bora rasi','PKR 300/400','24 hours'],
+    ['Ketta Poli Tap','Full Truck','PKR 120','24 hours'],
+    ['Ketta Poli Tap','Full Truck','PKR 120','24 hours']
+];
+
+// Sindhi rate list continuation
+const rateListSindhi = [
+    ['سکر/باهرو/گارھو','چانور / دال 50ڪلو','140 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','چانور / دال 25ڪلو','70 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','ڪيٽا بيج ۽ نمڪو','120 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','ڪيٽا شاپر 25ڪلو','120 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','ڪيٽا کجور','150 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بندل کجور','200 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا اخبار','100 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا پولي ٽيپ','250 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا لفافا ڪاغذ ٿيل 100ڪلو','400 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا ڪيل','150 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا ٽيوا','250 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا پيپر','500 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بندل چٽائي','400 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','ڪارٽن سنگلي','120 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','ڪارٽن 2 والا','120 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','ڪارٽن 3/4 والا','180 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بندل ۽ بورا ڪپڙا','400 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بندل بلچا کوڏيار','150 رپيا','24 ڪلاڪ'],
+    ['سکر/باهرو/گارھو','بورا رسي','300/400 رپيا','24 ڪلاڪ'],
+    ['مڪمل ٽرڪ','ڪيٽا پولي ٽيپ','120 رپيا','24 ڪلاڪ'],
+    ['مڪمل ٽرڪ','ڪيٽا پولي ٽيپ','120 رپيا','24 ڪلاڪ']
+];
+
+// Function to populate rate list table
+function populateRateList() {
+    tbody.innerHTML = '';
+    const list = isEnglish ? rateListEnglish : rateListSindhi;
+    list.forEach(row => {
+        const tr = document.createElement('tr');
+        row.forEach(cell => {
+            const td = document.createElement('td');
+            td.innerText = cell;
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+}
+
+// Initial populate
+populateRateList();
+
+// Language toggle
+langToggle.addEventListener('click', () => {
+    isEnglish = !isEnglish;
+    langToggle.innerText = isEnglish ? 'Sindhi' : 'English';
+
+    // Hero Section
+    document.getElementById('heroTitle').innerText = isEnglish ?
+        'All Gousia Company – Your Trust, Our Responsibility. 🤝🚚' :
+        'العفیہ ڪمپني – توهان جو اعتماد، اسان جي ذميواري. 🤝🚚';
+    document.getElementById('heroLead').innerText = isEnglish ?
+        '“Safe, Fast and Reliable Transport Service.”' :
+        '“محفوظ، تيز ۽ قابل اعتماد ٽرانسپورٽ سروس.”';
+    document.getElementById('heroDesc').innerText = isEnglish ?
+        '“We transport your goods and cargo safely from one place to another with fast and on-time delivery. Our mission is to provide our customers with the best transport service.” 🚚📦' :
+        '“اسان توهان جا سامان ۽ ڪارگو محفوظ طريقي سان هڪ هنڌ کان ٻي هنڌ تائين پهچائيندا آهيون، تيز ۽ وقت تي پهچائڻ سان. اسان جو مقصد پنهنجي گراهڪن کي بهترين ٽرانسپورٽ سروس مهيا ڪرڻ آهي.” 🚚📦';
+    document.getElementById('bookNow').innerText = isEnglish ? 'Book Now' : 'بڪ ڪريو';
+
+    // Services Section
+    document.getElementById('servicesTitle').innerText = isEnglish ? 'Our Services' : 'اسان جون خدمتون';
+    document.getElementById('service1').innerText = isEnglish ? 'Truck Transport' : 'ٽرڪ ٽرانسپورٽ';
+    document.getElementById('service1Desc').innerText = isEnglish ? 'Fast goods delivery across cities.' : 'شهرن ۾ تيز سامان پهچائڻ.';
+    document.getElementById('service2').innerText = isEnglish ? 'Cargo Delivery' : 'ڪارگو ڊليوري';
+    document.getElementById('service2Desc').innerText = isEnglish ? 'Professional cargo handling.' : 'پيشه ورانه ڪارگو هينڊلنگ.';
+    document.getElementById('service3').innerText = isEnglish ? 'Warehousing' : 'ويئر هائوسنگ';
+    document.getElementById('service3Desc').innerText = isEnglish ? 'Secure storage for goods.' : 'سامان لاءِ محفوظ اسٽوريج.';
+
+    // Discount Section
+    document.getElementById('discountTitle').innerText = isEnglish ? '🎉 Special Discount Offer (2025)' : '🎉 خاص رعايتي آڇ (2025)';
+    document.getElementById('discountDesc').innerText = isEnglish ? 'Book your transport today and get the best price.' : 'اڄ ئي پنهنجي ٽرانسپورٽ بڪ ڪريو ۽ بهترين قيمت حاصل ڪريو.';
+    document.getElementById('discountRate').innerText = isEnglish ? '🔥 20% OFF on Selected Routes' : '🔥 چونڊيل رستن تي 20٪ رعايت';
+    document.getElementById('discountBtn').innerText = isEnglish ? 'Book Now' : 'بڪ ڪريو';
+
+    // Table Headers
+    document.getElementById('thItem').innerText = isEnglish ? 'City' : 'شهر';
+    document.getElementById('thTruck').innerText = isEnglish ? 'Items' : 'سامان';
+    document.getElementById('thPrice').innerText = isEnglish ? 'Price' : 'قيمت';
+    document.getElementById('thTime').innerText = isEnglish ? 'Delivery Time' : 'پهچائڻ جو وقت';
+
+    // Contact Section
+    document.getElementById('contactTitle').innerText = isEnglish ? 'Contact Us' : 'رابطو ڪريو';
+    document.getElementById('contactPhone').innerText = isEnglish ? 'Phone: +92 3220251034' : 'فون: +92 3220251034';
+    document.getElementById('contactEmail').innerText = isEnglish ? 'Email: info@gousiatransport.com' : 'اي ميل: info@gousiatransport.com';
+    document.getElementById('contactLocation').innerText = isEnglish ? 'Karachi, Pakistan' : 'ڪراچي، پاڪستان';
+    document.getElementById('sendBtn').innerText = isEnglish ? 'Send Message' : 'موڪليو';
+
+    // Footer
+    const footerH5 = document.querySelectorAll('.footer h5');
+    footerH5[0].innerText = isEnglish ? 'About Us' : 'اسان بابت';
+    footerH5[1].innerText = isEnglish ? 'Quick Links' : 'جلدي لنڪ';
+    footerH5[2].innerText = isEnglish ? 'Contact Info' : 'رابطو معلومات';
+    const footerLinks = document.querySelectorAll('.footer-links li a');
+    footerLinks[0].innerText = isEnglish ? 'Home' : 'گهر';
+    footerLinks[1].innerText = isEnglish ? 'Services' : 'خدمتون';
+    footerLinks[2].innerText = isEnglish ? 'Rate List' : 'ريٽ لسٽ';
+    footerLinks[3].innerText = isEnglish ? 'Contact' : 'رابطو';
+
+    // Populate Table
+    populateRateList();
+});
+
+// Contact form alert
+const contactForm = document.querySelector(".contact form");
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Your message is sent successfully! Thank you 😊");
+    contactForm.reset();
+});
+</script>
+<!-- discount -->
+ <script>
+
+function checkDiscount(){
+
+let today = new Date();
+let offerEnd = new Date("2026-01-11");
+
+if(today <= offerEnd){
+
+alert("🎉 مبارک ہو!\nڈسکاؤنٹ آفر جاری ہے۔\nابھی اپنی بکنگ مکمل کریں۔");
+
+}else{
+
+alert("⚠️ معذرت!\nڈسکاؤنٹ آفر ختم ہو چکی ہے۔\nThank You!");
+
+}
+
+}
+
+</script>
+</body>
+</html>
